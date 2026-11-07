@@ -1,0 +1,16 @@
+[project]
+name = "key-and-go"
+version = "0.1.0"
+description = "Бот выдачи VPN-ключей по секретному слову"
+requires-python = ">=3.13"
+dependencies = ["httpx", "qrcode[pil]"]
+
+[project.optional-dependencies]
+dev = ["ruff"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["keyandgo*"]
