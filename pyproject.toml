@@ -6,7 +6,7 @@ requires-python = ">=3.13"
 dependencies = ["httpx", "qrcode[pil]"]
 
 [project.optional-dependencies]
-dev = ["ruff"]
+dev = ["pre-commit", "ruff"]
 
 [build-system]
 requires = ["setuptools>=68"]
@@ -14,3 +14,20 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["keyandgo*"]
+
+[tool.ruff]
+line-length = 100
+preview = true
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle: ошибки и стиль (включая пустые строки E3xx)
+    "W",   # pycodestyle: пробельные предупреждения
+    "F",   # pyflakes: логические ошибки (неиспользуемые имена, несуществующие имена)
+    "I",   # isort: порядок импортов
+    "N",   # pep8-naming: имена классов, функций, аргументов
+    "UP", # pyupgrade: современный синтаксис под requires-python
+    "B",   # flake8-bugbear: частые баги
+    "C4", # flake8-comprehensions: избыточные comprehension
+    "SIM", # flake8-simplify: упрощения
+]
