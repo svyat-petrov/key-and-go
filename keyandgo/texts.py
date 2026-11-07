@@ -1,6 +1,7 @@
 # Идентификаторы кнопок: приходят в IncomingMessage.text при нажатии
 KEY_TEXT = "key_text"
 KEY_QR = "key_qr"
+KEY_CONFIG = "key_config"
 SUPPORT = "support"
 
 # Подписи кнопок для клавиатуры

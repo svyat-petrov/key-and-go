@@ -17,4 +17,11 @@ class SendImage:
     caption: str = ""
 
 
-type Action = SendText | SendImage
+@dataclass(frozen=True)
+class SendConfig:
+    user_id: str
+    file: bytes
+    caption: str = ""
+
+
+type Action = SendText | SendImage | SendConfig
